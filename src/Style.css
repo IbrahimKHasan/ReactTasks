@@ -1,0 +1,153 @@
+body {
+  background-color: rgb(207, 146, 146);
+}
+.form {
+  margin: 50px auto;
+  width: 25%;
+  border-radius: 10px;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 5px 5px 11px 5px rgba(0, 0, 0, 0.24);
+}
+.form2 {
+  margin: 50px auto;
+  width: 35%;
+  border-radius: 10px;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 5px 5px 11px 5px rgba(0, 0, 0, 0.24);
+}
+.form3 {
+  margin: 50px auto;
+  width: 45%;
+  border-radius: 10px;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 5px 5px 11px 5px rgba(0, 0, 0, 0.24);
+}
+tr:hover {
+  background-color: rgb(211, 210, 210);
+}
+.form-box {
+  display: grid;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  row-gap: 10px;
+  margin-bottom: 50px;
+}
+.form-box2 {
+  display: grid;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  row-gap: 10px;
+  margin-bottom: 50px;
+}
+.input {
+  width: 90%;
+  padding: 8px;
+  border-radius: 5px;
+}
+span {
+  color: rgb(5, 223, 5);
+  font-weight: bolder;
+}
+.label {
+  font-weight: bolder;
+}
+.submit {
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(7, 114, 255);
+  color: white;
+  padding: 5px;
+  font-size: large;
+  margin: 10px 0px 0px 0px;
+  width: 70%;
+  text-align: center;
+}
+.submit2 {
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(7, 114, 255);
+  color: white;
+  padding: 5px;
+  font-size: large;
+  margin: 10px 0px 0px 0px;
+  width: 20%;
+  text-align: center;
+}
+th,
+td {
+  text-align: center;
+}
+.todo-col {
+  width: 80%;
+}
+.clear {
+  border: none;
+  border-radius: 5px;
+  background-color: red;
+  color: white;
+  padding: 5px;
+  font-size: large;
+  width: 70%;
+  text-align: center;
+}
+.clear2 {
+  border: none;
+  border-radius: 5px;
+  background-color: red;
+  color: white;
+  padding: 5px;
+  font-size: large;
+  width: 20%;
+  text-align: center;
+}
+.clear3 {
+  border: none;
+  border-radius: 5px;
+  background-color: red;
+  color: white;
+  padding: 5px;
+  font-size: large;
+  width: 100%;
+  text-align: center;
+}
+.edit {
+  border: none;
+  border-radius: 5px;
+  background-color: green;
+  color: white;
+  padding: 5px;
+  font-size: large;
+  width: 100%;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+@media (max-width: 1024px) {
+  .form {
+    margin: 60px auto;
+    width: 40%;
+  }
+}
+@media (max-width: 800px) {
+  .form {
+    margin: 40px auto;
+    width: 60%;
+    overflow: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .form {
+    margin: 40px auto;
+    width: 80%;
+  }
+  .form2 {
+    margin: 50px auto;
+    width: 95%;
+  }
+}
