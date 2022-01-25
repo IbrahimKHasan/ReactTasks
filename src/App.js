@@ -5,6 +5,7 @@ import Navbar from "./Navbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Todo from "./Todo";
 import ExpenseTracker from "./ExpenseTracker";
+import Pagination from "./Pagination";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/Display" element={<DisplayTask />} />
           <Route path="/ToDo" element={<Todo />} />
           <Route path="/ExpenseTracker" element={<ExpenseTracker />} />
+          <Route path="/Pagination" element={<Pagination />} />
         </Routes>
       </BrowserRouter>
     </div>

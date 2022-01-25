@@ -143,8 +143,10 @@ export class Todo extends Component {
               {localStorage.getItem("todo")
                 ? list.map((ele, i) => {
                     return (
-                      <tr id={`tr-${i}`}>
-                        <th scope="row">{i}</th>
+                      <tr>
+                        <th id={`tr-${i}`} scope="row">
+                          {i}
+                        </th>
                         <td id={`click-${i}`} onDoubleClick={this.doubleClick}>
                           <span style={{ color: "black" }} id={`list-${i}`}>
                             {ele}

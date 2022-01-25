@@ -36,6 +36,11 @@ export class Navbar extends Component {
                 ExpenseTracker
               </Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/Pagination">
+                Pagination
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>
