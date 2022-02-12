@@ -9,12 +9,14 @@ export class DisplayTask extends Component {
       lname: "",
       email: "",
       password: "",
+      row: [],
     };
   }
   Change = (event) => {
     this.setState({
       [event.target.name]: event.target.value,
     });
+    console.log(this.state.row);
   };
 
   formSubmit = (e) => {
@@ -52,13 +54,42 @@ export class DisplayTask extends Component {
     localStorage.setItem("color", "red");
     window.location.href = "http://localhost:3000/Display";
   };
+  componentDidMount() {
+    const axios = require("axios");
 
+    // Make a request for a user with a given ID
+    axios
+      .get("http://localhost/react/my-app/src/select.php")
+      .then((response) => {
+        // handle success
+        console.log(response);
+        this.setState({ row: response.data });
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      })
+      .then(function () {
+        // always executed
+      });
+  }
   render() {
     if (localStorage.getItem("color")) {
       document.body.style.backgroundColor = localStorage.getItem("color");
     }
     return (
       <div className="form">
+        <table>
+          {this.state.row.map((ele, i) => {
+            return (
+              <tr key={i}>
+                <td>{ele.coffee_name}</td>
+                <td>{ele.coffee_country}</td>
+                <td>{ele.coffee_price}</td>
+              </tr>
+            );
+          })}
+        </table>
         <h4 style={{ display: localStorage.getItem("fname") ? "" : "none" }}>
           Welcome{" "}
           <span>

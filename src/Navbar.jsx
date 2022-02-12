@@ -2,9 +2,16 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 export class Navbar extends Component {
+  logout = () => {
+    localStorage.removeItem("fname");
+    localStorage.removeItem("lname");
+    localStorage.removeItem("email");
+    window.location.href = "http://localhost:3000/Home";
+  };
+
   render() {
     return (
-      <nav className="navbar navbar-expand-lg navbar-light bg-light opacity-75">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
         <Link className="navbar-brand" to="/">
           React
         </Link>
@@ -40,6 +47,65 @@ export class Navbar extends Component {
               <Link className="nav-link" to="/Pagination">
                 Pagination
               </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/Semantic">
+                SemanticUI
+              </Link>
+            </li>
+            <li
+              style={
+                localStorage.getItem("fname")
+                  ? { display: "none" }
+                  : { display: "" }
+              }
+              className="nav-item"
+            >
+              <Link className="nav-link" to="/Signup">
+                Signup
+              </Link>
+            </li>
+            <li
+              style={
+                localStorage.getItem("email")
+                  ? { display: "none" }
+                  : { display: "" }
+              }
+              className="nav-item"
+            >
+              <Link className="nav-link" to="/Login">
+                Login
+              </Link>
+            </li>
+            <li
+              style={
+                localStorage.getItem("email")
+                  ? { marginLeft: "600px" }
+                  : { display: "none" }
+              }
+              className="nav-item"
+            >
+              <Link className="nav-link" to="/Home">
+                {localStorage.getItem("email")
+                  ? localStorage.getItem("fname")
+                  : ""}
+              </Link>
+            </li>
+            <li
+              style={
+                localStorage.getItem("email")
+                  ? { marginLeft: "10px", marginTop: "3px" }
+                  : { display: "none" }
+              }
+              className="nav-item"
+            >
+              <button
+                style={{ backgroundColor: "#0d6efd", border: "none" }}
+                className="nav-link"
+                onClick={this.logout}
+              >
+                Logout
+              </button>
             </li>
           </ul>
         </div>

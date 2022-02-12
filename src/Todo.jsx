@@ -67,6 +67,7 @@ export class Todo extends Component {
   editCancel = () => {
     window.location.href = "http://localhost:3000/ToDo";
   };
+
   editSubmit = (event) => {
     var id = event.target.name;
     var value = this.state.edit;
@@ -200,7 +201,7 @@ export class Todo extends Component {
                           <button
                             name={i}
                             value={ele}
-                            type="submit"
+                            type="button"
                             className="edit"
                             onClick={this.todoEdit}
                           >
